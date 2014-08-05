@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/Guest/Development/drewsberry.github.io/_posts'
+let g:netrw_dirhist_2='/Users/Guest/Development/drewsberry.github.io'
+let g:netrw_dirhist_3='/Users/Guest/Development/drewsberry.github.io/_posts'
+let g:netrw_dirhist_4='/Users/Guest/Development/project-euler'

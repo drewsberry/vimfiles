@@ -1,0 +1,5 @@
+# Generated view files
+view/*
+
+# Backup vim files
+*~
