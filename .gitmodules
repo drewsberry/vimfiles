@@ -5,3 +5,7 @@
 [submodule "vim-perl"]
     path = bundle/vim-perl
     url = git://github.com/vim-perl/vim-perl.git
+
+[submodule "vim-python-pep8-indent"]
+    path = bundle/vim-python-pep8-indent
+    url = git://github.com/vim-python-pep8-indent.git
