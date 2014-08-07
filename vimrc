@@ -1,16 +1,9 @@
 " Information {{{
 "
-" An example for a vimrc file.
+" My personal vimrc file.
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2011 Apr 15
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-" When started as "evim", evim.vim will already have done these settings.  if v:progname =~? "evim" finish endif
+" Maintainer:	Drew Silcock <drew@drewsilcock.co.uk>
+" Last change:	2014 August 7
 "
 " }}}
 
@@ -131,46 +124,6 @@ nmap <F2> :set formatoptions+=a <CR>
 nmap <F3> :set formatoptions-=a <CR>
 
 " }}}
-
-" " Vim-latex settings {{{
-" 
-" " REQUIRED: This makes vim invoke LaTex-Suite when you open a tex file
-" " filetype plugin on
-" 
-" " IMPORTANT: win32 users will need to have 'shellslash' set so that LaTeX
-" " can be called correctly
-" " set shellslash
-" 
-" " IMPORTANT: grep will sometimes skip displaying the file name if you
-" " search in a single file. This will confuse LaTex-Suite Set your grep
-" " program to always generate a file-name.
-" set grepprg=grep\ -nH\ $*
-" 
-" " OPTIONAL: This enables automatic indentation as you type.
-" filetype indent on
-" 
-" " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" " The following changes the default filetype to 'tex':
-" let g:tex_flavor='latex'
-" let g:Tex_DefaultTargetFormat='pdf'
-" let g:Tex_ViewRule_dvi='okular'
-" let g:Tex_ViewRule_ps='okular'
-" let g:Tex_ViewRule_pdf='okular --presentation'
-" let g:Tex_IgnoredWarnings = 
-"   \"Undefull\n".
-"   \"Overfull\n".
-"   \"specifier changed to\n".
-"   \"You have requested\n".
-"   \"Missing number, treated as zero.\n".
-"   \"There were undefined references\n".
-"   \"Citation %.%# undefined\n".
-"   \"LaTeX Font Warning: Font shape `OMS/qpl/m/n' undefined\n".
-"   \'LaTeX Font Warning:'"
-" " This number N says that latex-suite should ignore the first N of the above.
-" let g:Tex_IgnoreLevel = 80
-" 
-" let g:Imap_FreezeImap = 1
 
 " Rainbow parentheses default settings
 let g:rbpt_colorpairs = [
