@@ -89,7 +89,7 @@ endif
 " }}}
 
 " Custom settings {{{
-"
+
 set autoindent
 set bg=dark  " set background as dark
 syntax on
@@ -103,8 +103,7 @@ highlight LineNr ctermfg=White
 " highlight LineNr ctermbg=DarkGrey
 " highlight Comment ctermfg=DarkYellow
 set guifont=Inconsolata\ 10
-"setlocal spell spelllang=en_gb " Set British spellchecking on (useful pretty
-"much only for writing LaTeX documents with vim).
+setlocal spelllang=en_gb " Set spellcheck to British English
 
 " Manual folding. With visual block over area to be folded, press 'zf' to fold
 set foldmethod=manual
@@ -123,7 +122,11 @@ autocmd FileType c map \ce :!gcc -o "%:p:r" "%:p" && "%:p:r"<CR>
 nmap <F2> :set formatoptions+=a <CR>
 nmap <F3> :set formatoptions-=a <CR>
 
+let g:tex_flavor = "latex"
+
 " }}}
+
+" Custom plugins {{{
 
 " Rainbow parentheses default settings
 let g:rbpt_colorpairs = [
