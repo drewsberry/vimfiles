@@ -6,3 +6,6 @@ view/*
 
 # Backup vim files
 *~
+
+# Vim swap files
+.*.swp
