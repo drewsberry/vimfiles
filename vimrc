@@ -148,11 +148,23 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-" Rainbow parentheses on by default
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" Rainbow parentheses on by default, but only for certain source files.
+" Vim return -1 if index can't find something in a list, so only enable
+" rainbow parentheses if the filetype is one of the approved few.
+
+" Filetypes to allow rainbow parentheses for
+let rainbow_exts = ["c", "C", "cpp", "pl", "py", "rb"]
+
+" Get the current filename extension (filetype not yet set)
+let file_ext = expand("%:e")
+
+" If the extension is one of the allowed few, set rainbow brackets
+if index(rainbow_exts, file_ext) != -1
+    au VimEnter * RainbowParenthesesToggle
+    au Syntax * RainbowParenthesesLoadRound
+    au Syntax * RainbowParenthesesLoadSquare
+    au Syntax * RainbowParenthesesLoadBraces
+endif
 
 " Use Pathogen
 execute pathogen#infect()
