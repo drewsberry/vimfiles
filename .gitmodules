@@ -1,15 +1,15 @@
-[submodule "vim-colors-solarized"]
+[submodule "bundle/vim-colors-solarized"]
     path = bundle/vim-colors-solarized
     url = git://github.com/altercation/vim-colors-solarized.git
 
-[submodule "vim-perl"]
+[submodule "bundle/vim-perl"]
     path = bundle/vim-perl
     url = git://github.com/vim-perl/vim-perl.git
 
-[submodule "vim-python-pep8-indent"]
+[submodule "bundle/vim-python-pep8-indent"]
     path = bundle/vim-python-pep8-indent
     url = git://github.com/hynek/vim-python-pep8-indent.git
 
-[submodule "rainbow-parentheses.vim"]
+[submodule "bundle/rainbow-parentheses.vim"]
     path = bundle/rainbow-parentheses.vim
     url = git://github.com/kien/rainbow_parentheses.git
