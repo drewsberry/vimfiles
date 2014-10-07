@@ -2,8 +2,8 @@
 "
 " My personal vimrc file.
 "
-" Maintainer:	Drew Silcock <drew@drewsilcock.co.uk>
-" Last change:	2014 August 7
+" Maintainer: Drew Silcock <drew@drewsilcock.co.uk>
+" Last change: 2014 August 7
 "
 " }}}
 
@@ -41,7 +41,7 @@ endif
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-    set hlsearch
+  set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -74,7 +74,7 @@ if has("autocmd")
 
 else
 
-  set autoindent		" always set autoindenting on
+set autoindent	" always set autoindenting on
 
 endif " has("autocmd")
 
@@ -83,7 +83,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+                 \ | wincmd p | diffthis
 endif
 
 " }}}
@@ -91,18 +91,14 @@ endif
 " Custom settings {{{
 
 set autoindent
-set bg=dark  " set background as dark
+set bg=dark " set background as dark
 syntax on
-"colorscheme solarized
 set nu
 set numberwidth=3
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 highlight LineNr ctermfg=White
-" highlight LineNr ctermbg=DarkGrey
-" highlight Comment ctermfg=DarkYellow
-set guifont=Inconsolata\ 10
 setlocal spelllang=en_gb " Set spellcheck to British English
 
 " Manual folding. With visual block over area to be folded, press 'zf' to fold
@@ -122,7 +118,18 @@ autocmd FileType c map \ce :!gcc -o "%:p:r" "%:p" && "%:p:r"<CR>
 nmap <F2> :set formatoptions+=a <CR>
 nmap <F3> :set formatoptions-=a <CR>
 
+" I never write plain TeX, only LaTeX
 let g:tex_flavor = "latex"
+
+" Tab navigation like Firefox or Chrome
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+nnoremap <C-w>     :tabclose<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>i
+inoremap <C-w>     <Esc>:tabclose<CR>i
 
 " }}}
 
@@ -168,6 +175,10 @@ endif
 
 " Use Pathogen
 execute pathogen#infect()
+
+" Airline settings
+set laststatus=2
+let g:airline_powerline_fonts=1
 
 " }}}
 
