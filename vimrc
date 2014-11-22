@@ -124,11 +124,11 @@ let g:tex_flavor = "latex"
 " Tab navigation like Firefox or Chrome
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
+nnoremap <C-t>     :tabnew .<CR>
 nnoremap <C-w>     :tabclose<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 inoremap <C-w>     <Esc>:tabclose<CR>i
 
 " }}}
