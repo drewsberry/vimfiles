@@ -160,7 +160,7 @@ let g:rbpt_colorpairs = [
 " rainbow parentheses if the filetype is one of the approved few.
 
 " Filetypes to allow rainbow parentheses for
-let rainbow_exts = ["c", "C", "cpp", "pl", "py", "rb"]
+let rainbow_exts = ["c", "C", "cpp", "pl", "py", "rb", "js"]
 
 " Get the current filename extension (filetype not yet set)
 let file_ext = expand("%:e")
