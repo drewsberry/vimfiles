@@ -121,6 +121,17 @@ nmap <F3> :set formatoptions-=a <CR>
 " I never write plain TeX, only LaTeX
 let g:tex_flavor = "latex"
 
+" Map F6 to texcount
+function! WordCount()
+    let filename = expand("%")
+    let cmd = "texcount -inc -sum -0 '" . filename . "' | tr -d '\n'"
+    let result = system(cmd)
+    echo result . " words"
+endfunction
+
+nnoremap <F6> :call WordCount()<CR>
+inoremap <F6> <Esc>:call WordCount()<CR>a
+
 " Tab navigation like Firefox or Chrome
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
