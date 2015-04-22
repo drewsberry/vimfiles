@@ -91,7 +91,8 @@ endif
 " Custom settings {{{
 
 set autoindent
-set bg=dark " set background as dark
+"set bg=dark
+set bg=light
 syntax on
 set nu
 set numberwidth=3
