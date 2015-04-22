@@ -137,10 +137,22 @@ nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
 nnoremap <C-t>     :tabnew .<CR>
 nnoremap <C-w>     :tabclose<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-S-tab> <Esc>:tabprevious<CR>a
+inoremap <C-tab>   <Esc>:tabnext<CR>a
 inoremap <C-t>     <Esc>:tabnew<CR>
-inoremap <C-w>     <Esc>:tabclose<CR>i
+inoremap <C-w>     <Esc>:tabclose<CR>a
+
+" Change colour themes easily
+function! ReverseBackground()
+    if &bg == "light"
+        set background=dark
+    else
+        set background=light
+    endif
+endfunction
+
+nnoremap <F5> :call ReverseBackground()<CR>
+inoremap <F5> <Esc>:call ReverseBackground()<CR>a
 
 " }}}
 
